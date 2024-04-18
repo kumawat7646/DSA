@@ -1,0 +1,120 @@
+1:LCM=>
+
+#include<bits/stdc++.h>
+using namespace std;
+//gdc(greatest common divisor)
+int greatest_c_d(int a,int b){
+    int gcd=1;
+    int i=1;
+    while(i<=a ||i<=b)
+    {
+        if(a%i==0 && b%i==0){
+            gcd=i;
+            
+        }
+        i++;
+        
+    }
+    return gcd;
+}
+
+int lcm(int a, int b)
+{
+    return (a*b)/greatest_c_d(a,b);
+}
+
+int main(){
+    int a,b;
+    cout<<"enter the value of a and b:";
+    cin>>a>>b;
+    cout<<lcm(a,b);
+    return 0;
+}
+
+GCD=>
+
+#include<bits/stdc++.h>
+using namespace std;
+//gdc(greatest common divisor)
+int greatest_c_d(int a,int b){
+    int gcd=1;
+    int i=1;
+    while(i<=a ||i<=b)
+    {
+        if(a%i==0 && b%i==0){
+            gcd=i;
+            
+        }
+        i++;
+        
+    }
+    return gcd;
+}
+int main(){
+    int a,b;
+    cout<<"enter the value of a and b:";
+    cin>>a>>b;
+    cout<<greatest_c_d(a,b);
+    return 0;
+}
+----------------------------------------------------------------------------------------------------------------------------------
+2)
+#include<bits/stdc++.h>
+using namespace std;
+//gdc(greatest common divisor)
+
+ float hi(float a)
+{
+    float x=1.0,sum=0.0;
+    for(int i=1;i<=4;i++)
+    {
+        sum+=x;
+        x*=(3.0/2.0);
+        
+    }
+    return sum;
+}
+
+int main(){
+    float a;
+    cout<<hi(a);
+    return 0;
+}
+----------------------------------------------------------------------------------------------------------------------------------
+3)
+#include<bits/stdc++.h>
+using namespace std;
+int count(int n){
+    int count=0;
+    int  rem=0;
+    while(n){
+        rem=n%10;
+        n=n/10;
+        count++;
+    }
+    return count;
+}
+int remsquar(int num,int power){
+    if(power==0)
+        return 1;
+    return num*remsquar(num,power-1);
+}
+
+void sum()
+{
+        int n=1834;
+    int rem=0;
+    int sum=0;
+    while(n){
+        rem=n%10;
+        sum+=remsquar(rem,count(n));
+        n=n/10;
+        
+    }
+    cout<<sum;
+}
+
+int main(){
+    sum();
+    return 0;
+}
